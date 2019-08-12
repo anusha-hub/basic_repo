@@ -1,0 +1,150 @@
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ pwd
+/c/Users/aanis
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ pwd
+/c/Users/aanis
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ git --version
+git version 2.22.0.windows.1
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ git config --global user.name "anusha-hub"
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ git config --global user.email "anusha.sekha@gmail.com"
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ git clone https://github.com/anusha-hub/basic_repo.git
+Cloning into 'basic_repo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ ls -ld basic_repo/
+drwxr-xr-x 1 aanis 197609 0 Aug 12 20:20 basic_repo//
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ ls -lrta basic_repo/
+total 21
+drwxr-xr-x 1 aanis 197609  0 Aug 12 20:20 ../
+-rw-r--r-- 1 aanis 197609 30 Aug 12 20:20 README.md
+drwxr-xr-x 1 aanis 197609  0 Aug 12 20:20 .git/
+drwxr-xr-x 1 aanis 197609  0 Aug 12 20:20 ./
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ cd basic_repo/
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ ls -lrta
+total 21
+drwxr-xr-x 1 aanis 197609  0 Aug 12 20:20 ../
+-rw-r--r-- 1 aanis 197609 30 Aug 12 20:20 README.md
+drwxr-xr-x 1 aanis 197609  0 Aug 12 20:20 .git/
+drwxr-xr-x 1 aanis 197609  0 Aug 12 20:28 ./
+drwxr-xr-x 1 aanis 197609  0 Aug 12 20:28 basic_repo/
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        basic_repo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git branch -r
+  origin/HEAD -> origin/master
+  origin/master
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git fetch
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/anusha-hub/basic_repo
+ * [new branch]      ABC        -> origin/ABC
+ * [new branch]      DEF        -> origin/DEF
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git pull
+Already up to date.
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git branch -r
+  origin/ABC
+  origin/DEF
+  origin/HEAD -> origin/master
+  origin/master
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   basic_repo
+   
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        12aug 2019 file
+
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git add *
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   12aug 2019 file
+        new file:   basic_repo
+
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git commit -m "ourfirstcommit"
+[master 22365d6] ourfirstcommit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 12aug 2019 file
+ create mode 160000 basic_repo
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 321 bytes | 160.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/anusha-hub/basic_repo.git
+   ff06415..22365d6  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/basic_repo (master)
+$
